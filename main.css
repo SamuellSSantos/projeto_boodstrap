@@ -1,0 +1,52 @@
+
+.navbar-nav .nav-link.active{
+    color: #fff;
+}
+.nav-link, .dropdown-item{
+    text-align: center;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+header{
+    position:sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(202, 40, 40);
+}
+section{
+    height: 70vh;
+    background-color: #ccc;
+    padding-top: 80px;
+}
+
+.dropdown-toggle::after {
+            display: none; /* Oculta a seta padrão do Bootstrap */
+        }
+        .nav-link {
+            transition: background-color 1s, color 1s; /* Transição suave */
+        }
+
+        .nav-link:hover {
+            background-color: #007bff; /* Cor de fundo ao passar o mouse */
+            color: white; /* Cor do texto ao passar o mouse */
+        }
+
+        .dropdown-item:hover {
+            background-color: #0056b3; /* Cor de fundo do submenu ao passar o mouse */
+            color: white; /* Cor do texto do submenu ao passar o mouse */
+        }
+
+        /* Para ocultar o dropdown */
+        .dropdown-menu {
+            display: none; /* Oculta o submenu por padrão */
+        }
+
+        .show {
+            display: block; /* Mostra o submenu quando necessário */
+        }
+
+        #carouselExample{
+            position: relative;
+            z-index: 1;
+        }
