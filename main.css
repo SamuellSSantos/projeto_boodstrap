@@ -1,52 +1,67 @@
+/* Variáveis */
+:root {
+    --navbar-hover-bg: #007bff;
+    --dropdown-hover-bg: #0056b3;
+    --header-bg: rgb(202, 40, 40);
+}
 
-.navbar-nav .nav-link.active{
+/* Navbar */
+.navbar-nav .nav-link.active {
     color: #fff;
 }
-.nav-link, .dropdown-item{
+
+.nav-link, .dropdown-item {
     text-align: center;
 }
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
+
+.nav-link {
+    transition: background-color 1s, color 1s; /* Transição suave */
 }
-header{
-    position:sticky;
-    top: 0;
-    left: 0;
-    background-color: rgb(202, 40, 40);
+
+.nav-link:hover {
+    background-color: var(--navbar-hover-bg); /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
 }
-section{
+
+/* Dropdown */
+.dropdown-toggle::after {
+    display: none; /* Oculta a seta padrão do Bootstrap */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--dropdown-hover-bg); /* Cor de fundo do submenu ao passar o mouse */
+    color: white; /* Cor do texto do submenu ao passar o mouse */
+}
+
+/* Para telas grandes, mostrar o submenu ao passar o mouse */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+}
+
+/* Seções */
+section {
     height: 70vh;
     background-color: #ccc;
     padding-top: 80px;
 }
 
-.dropdown-toggle::after {
-            display: none; /* Oculta a seta padrão do Bootstrap */
-        }
-        .nav-link {
-            transition: background-color 1s, color 1s; /* Transição suave */
-        }
+/* Carrossel */
+.carousel-inner {
+    height: 500px; /* Defina a altura que desejar */
+}
 
-        .nav-link:hover {
-            background-color: #007bff; /* Cor de fundo ao passar o mouse */
-            color: white; /* Cor do texto ao passar o mouse */
-        }
-
-        .dropdown-item:hover {
-            background-color: #0056b3; /* Cor de fundo do submenu ao passar o mouse */
-            color: white; /* Cor do texto do submenu ao passar o mouse */
-        }
-
-        /* Para ocultar o dropdown */
-        .dropdown-menu {
-            display: none; /* Oculta o submenu por padrão */
-        }
-
-        .show {
-            display: block; /* Mostra o submenu quando necessário */
-        }
-
-        #carouselExample{
-            position: relative;
-            z-index: 1;
-        }
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.carousel-indicators li{
+    list-style: none;
+}
